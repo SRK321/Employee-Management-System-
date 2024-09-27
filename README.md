@@ -1,2 +1,4 @@
-#FrontEnd:-
-#Backend:- SpringBoot,SQL,JSP,Maven.
+# FrontEnd:-
+HTML,CSS,JS
+# Backend:- 
+SpringBoot,SQL,JSP,Maven.
