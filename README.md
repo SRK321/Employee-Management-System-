@@ -1,4 +1,4 @@
 # FrontEnd:-
-HTML,CSS,JS
+ReactJS
 # Backend:- 
-SpringBoot,SQL,JSP,Maven.
+SpringBoot,SQL,SpringSecurity
