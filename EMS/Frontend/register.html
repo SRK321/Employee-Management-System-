@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register Modal</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<div class="container"></div>
+
+<div class="modal">
+  <div class="modal-content">
+    <button class="close-button">X</button>
+    <h1>Welcome!</h1>
+    <p class="modal-desc">Please enter the following details.</p>
+    <form>
+      <div class="input-group">
+        <label for="emp_id">Employee Id</label>
+        <input type="text" id="emp_id" name="emp_id" placeholder="Employee Id">
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email">
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password">
+      </div>
+      <div class="input-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <p class="sign-up">Already Registered? <a href="#">Login now</a></p>
+  </div>
+</div>
+</body>
+</html>
