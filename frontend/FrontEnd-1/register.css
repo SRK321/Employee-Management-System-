@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+  }
+  
+  .container {
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dfd2ec5a01006fd8c4d7592a381d3776&auto=format&fit=crop&w=1000&q=80");
+    background-size: cover;
+    filter: brightness(0.5); /* Makes the background darker for better contrast */
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .modal {
+    position: relative;
+    width: 330px;
+    height: 460px;
+    background-color: rgb(185, 185, 185); /* Slight transparency */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    z-index: 1; /* Ensures the modal stays above the background */
+  }
+  
+  .modal-content {
+    width: 100%;
+    position: relative;
+   
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  h1 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: #333;
+  }
+  
+  .modal-desc {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+    font-size:small;
+    
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-size: 13px;
+    color: #000000;
+  }
+  
+  input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing:border-box;
+    font-size: 12px;
+    height: 10px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    color: #000000;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size:small;
+    margin-top:1px;
+  }
+  
+  button:hover {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  a {
+    color: #111111;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .sign-up {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+  
+  .sign-up a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 15px;
+  }
+  
+  .sign-up a:hover {
+    color: #373333;
+  }
