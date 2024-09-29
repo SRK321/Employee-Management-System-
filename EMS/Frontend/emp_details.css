@@ -1,0 +1,161 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  url('../images/bg4.jpg');
+    overflow-y: auto; /* Allow body to scroll */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+.container {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    border: 3px solid black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure content doesn't overflow the container */
+}
+
+.container form {
+    display: flex; /* Flexbox for horizontal alignment */
+    transition: transform 0.4s ease-in-out; /* Smooth horizontal transition */
+    width: 200%; /* Twice the width to accommodate both sections */
+}
+
+.form {
+    width: 50%; /* Each form section takes 50% of the width */
+    padding: 30px;
+    transition: 0.3s ease;
+}
+
+form.secActive {
+    transform: translateX(-50%); /* Shift to the second form */
+}
+
+.container header {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+.container header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #4070f4;
+}
+
+.container .title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.container .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input-field {
+    width: calc(100% / 3 - 10px); /* Adjust for space between fields */
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+.break{
+    width: 100%;
+    height: 1px;
+    background-color: #24242423;
+    margin: 5px 0;
+}
+.input-field label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #242424;
+
+}
+
+.input-field input,
+.input-field select {
+    padding: 0 15px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #0000001f;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    outline: none;
+}
+
+input[type="file"] {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+form button,
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #4070f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+form button:hover {
+    background-color: #265df2;
+}
+
+form .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .backBtn i {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 750px) {
+    .input-field {
+        width: calc(100% / 2 - 10px); /* Adjust for two columns on mid-sized screens */
+    }
+}
+
+@media (max-width: 550px) {
+    .input-field {
+        width: 100%; /* Full width for smaller screens */
+    }
+}

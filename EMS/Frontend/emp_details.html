@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="emp_details.css">
+    <!-- Iconscout CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
+    <title>Responsive Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <!-- Single form wrapping all input fields -->
+        <form action="#" method="POST">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+                    <div class="break"></div>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full name</label>
+                            <input type="text" placeholder="Enter Full name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Company Mail</label>
+                            <input type="email" placeholder="Enter Company Mail" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Personal Email</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Address Line 1</label>
+                            <input type="text" placeholder="Enter Address Line 1" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Address Line 2</label>
+                            <input type="text" placeholder="Enter Address Line 2" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Pin Code</label>
+                            <input type="text" placeholder="Enter Pin code" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Role</label>
+                            <input type="text" placeholder="Enter employee Role" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Date of Joining</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Employee Image</label>
+                            <input type="file" accept="image/*" required>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="Past Experience">
+                    <span class="title">Past Experience</span>
+                    <div class="break"></div>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Profession</label>
+                            <select required>
+                                <option disabled selected>Select</option>
+                                <option>Fresher</option>
+                                <option>Experience</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Previous Company</label>
+                            <input type="text" placeholder="Enter Company Name">
+                        </div>
+                        <div class="input-field">
+                            <label>Domain</label>
+                            <input type="text" placeholder="Enter Expertise Domain">
+                        </div>
+                        <div class="input-field">
+                            <label>Years of experience</label>
+                            <input type="number" placeholder="Enter total years">
+                        </div>
+                        <div class="input-field">
+                            <label>Joining Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="input-field">
+                            <label>Resign Date</label>
+                            <input type="date">
+                        </div>
+                    </div>
+                    <button type="button" class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+                <p style="font-size: 18px; color: rgb(199, 0, 0);">*In case of Fresher enter NA.</p>
+            </div>
+
+            <div class="form second">
+                <div class="Past Experiences">
+                    <span class="title">Account Details</span>
+                    <div class="break"></div>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Bank Name</label>
+                            <input type="text" placeholder="Enter branch name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Account No.</label>
+                            <input type="number" placeholder="Enter Account Number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>IFSC</label>
+                            <input type="text" placeholder="Enter IFSC code" required>
+                        </div>
+                        <div class="input-field">
+                            <label>CIF Number</label>
+                            <input type="text" placeholder="Enter CIF code" required>
+                        </div>
+                        <div class="input-field">
+                            <label>PAN</label>
+                            <input type="text" placeholder="Enter PAN number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Aadhar Number</label>
+                            <input type="text" placeholder="Enter Aadhar number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Project Details">
+                    <span class="title">Project Details</span>
+                    <div class="break"></div>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Project Code</label>
+                            <input type="text" placeholder="Enter Project code" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Project Name</label>
+                            <input type="text" placeholder="Enter Project name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Reporting Manager</label>
+                            <input type="text" placeholder="Enter Reporting manager name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Role</label>
+                            <input type="text" placeholder="Role in Project" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Starting Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="input-field">
+                            <label>Ending Date</label>
+                            <input type="date">
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button type="submit" class="submit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
