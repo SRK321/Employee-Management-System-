@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard | Employee Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- Font Awesome for the Hamburger Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
+      }
+
+      /* Dashboard header styling */
+      .dashboard-header {
+        background-color: #81ba82;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        position: relative;
+      }
+
+      .dashboard-header h2 {
+        margin: 0;
+        font-weight: bold;
+      }
+
+      .dashboard-header p {
+        margin-top: 5px;
+        font-size: 1.1rem;
+      }
+
+      /* Sidebar styling */
+      #sidebar {
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #343a40;
+        color: white;
+        width: 250px;
+        transform: translateX(-250px);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        padding-top: 60px;
+        border-right: 2px solid rgba(255,255,255,0.1);
+      }
+
+      #sidebar.active {
+        transform: translateX(0);
+      }
+
+      #sidebar a {
+        display: block;
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: background 0.3s ease;
+      }
+
+      #sidebar a:hover {
+        background-color: #81ba82;
+      }
+
+      #sidebarToggle {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        cursor: pointer;
+        color: white; /* White color for the hamburger icon */
+        font-size: 30px;
+        z-index: 1001;
+      }
+
+      /* Logout button styling inside the sidebar */
+      .logout-btn {
+        display: block;
+        margin: 20px auto; /* Centers the button horizontally */
+        background-color: #dc3545;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: background-color 0.3s ease;
+        width: 150px; /* Fixed width for the button */
+        text-align: center;
+      }
+
+      .logout-btn:hover {
+        background-color: #c82333;
+      }
+
+      .container {
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+        padding: 30px;
+      }
+
+      .container.active {
+        margin-left: 250px;
+      }
+
+      .section {
+        display: none;
+      }
+
+      .section.active {
+        display: block;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .card-header {
+        background-color: #81ba82;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .section.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .btn-secondary {
+        background-color: #343a40;
+        border: none;
+        transition: background 0.3s ease;
+      }
+
+      .btn-secondary:hover {
+        background-color: #81ba82;
+      }
+
+      .btn {
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .card-body p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hamburger icon (Left side) -->
+    <i id="sidebarToggle" class="fas fa-bars"></i>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <a href="#" onclick="navigateToSection('personalDetails')"
+        >Personal Details</a
+      >
+      <a href="#" onclick="navigateToSection('professionalDetails')"
+        >Professional Details</a
+      >
+      <a href="#" onclick="navigateToSection('projectDetails')"
+        >Project Details</a
+      >
+      <a href="#" onclick="navigateToSection('financeDetails')"
+        >Finance Details</a
+      >
+
+      <!-- Logout Button placed under the options -->
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+      <h2>Employee Dashboard</h2>
+      <p><strong>Employee ID:</strong> 001234</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+      <div id="personalDetails" class="card mb-3 section">
+        <div class="card-header">Personal Details</div>
+        <div class="card-body">
+          <p><strong>Full Name:</strong> John Doe</p>
+          <p><strong>Date of Birth:</strong> 1990-01-01</p>
+          <p><strong>Gender:</strong> Male</p>
+          <p><strong>Mobile:</strong> 9876543210</p>
+          <p><strong>Company Email:</strong> john.doe@company.com</p>
+          <p><strong>Emergency Contact:</strong> Jane Doe (9876543211)</p>
+        </div>
+      </div>
+
+      <div id="professionalDetails" class="card mb-3 section">
+        <div class="card-header">Professional Details</div>
+        <div class="card-body">
+          <p><strong>Employee Code:</strong> 001234</p>
+          <p><strong>Reporting Manager:</strong> Jane Smith</p>
+          <p><strong>Date of Joining:</strong> 2015-03-01</p>
+          <p><strong>Office Address:</strong> Office Building, XYZ City</p>
+        </div>
+      </div>
+
+      <div id="projectDetails" class="card mb-3 section">
+        <div class="card-header">Project Details</div>
+        <div class="card-body">
+          <p><strong>Current Project:</strong> Project A</p>
+          <p><strong>Previous Projects:</strong> Project X, Project Y</p>
+        </div>
+      </div>
+
+      <div id="financeDetails" class="card mb-3 section">
+        <div class="card-header">Finance Details</div>
+        <div class="card-body">
+          <p><strong>PAN:</strong> ABCDE1234F</p>
+          <p><strong>Aadhar:</strong> 1234 5678 9123</p>
+          <p><strong>Bank Account:</strong> ABC Bank - 123456789012</p>
+          <p><strong>IFSC:</strong> ABCD1234567</p>
+          <a href="#" class="btn btn-secondary"
+            >Download Last 6 Months Payslips (PDF)</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Toggle the sidebar when the hamburger icon is clicked
+      document
+        .getElementById("sidebarToggle")
+        .addEventListener("click", function () {
+          document.getElementById("sidebar").classList.toggle("active");
+          document.querySelector(".container").classList.toggle("active");
+        });
+
+      // Function to navigate between sections
+      function navigateToSection(sectionId) {
+        document.querySelectorAll(".section").forEach((section) => {
+          section.classList.remove("active");
+        });
+        document.getElementById(sectionId).classList.add("active");
+      }
+
+      // Logout function
+      function logout() {
+        window.location.href = "login.html"; // Redirect to login page
+      }
+    </script>
+  </body>
+</html>
