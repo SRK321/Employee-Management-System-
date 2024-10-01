@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Login</title>
+    <style>
+      body {
+        background-image: url('../images/lock2.jpeg');
+        background-size: cover;
+        background-position: left center; /* Image fully moved to the left */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        left: 350px;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      form {
+        background-color: rgba(242, 242, 242, 0.8);
+        width: 650px; /* Increased width */
+        margin: 0 auto;
+        padding: 40px; /* Increased padding */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border: 2px solid brown;
+      }
+
+      form h2 {
+        text-align: center;
+        font-size: 2rem; /* Larger font size for heading */
+      }
+
+      form p {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1.2rem; /* Slightly bigger text for instructions */
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        position: relative;
+        left: 10px;
+      }
+
+      input[type="email"] {
+        display: block;
+        width: 90%; /* Full width */
+        padding: 15px; /* Increased padding for input */
+        border-radius: 5px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        position: relative;
+        left: 10px;
+      }
+
+      input:focus {
+        outline: none;
+        box-shadow: 0 0 5px #87ceeb;
+      }
+
+      button[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 30px; /* Increased padding */
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        width: 40%; /* Wider button */
+        display: block;
+        margin: 20px auto;
+        transition: transform 0.2s ease;
+        font-size: 1.4rem;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #3e8e41;
+        transform: scale(1.1);
+      }
+
+      .text {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .text a {
+        color: #4caf50;
+      }
+
+      .text a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="forgot-password-form">
+        <h2>Forgot Your Password?</h2>
+        <p>Enter your email address to reset your password.</p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <button type="submit">Reset Password</button>
+      </form>
+    </div>
+  </body>
+</html>
